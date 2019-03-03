@@ -1,0 +1,63 @@
+<div class="container" style="background:goldenrod;">
+
+	<div class="text-center">
+		<img src="/assets/img/burger.png" alt="Cheeseburger" style="height:200px; width:200px;">
+		<h1 class="display-4">Eat-Da-Burger!</h1>
+
+	</div>
+
+
+
+	<section class="row">
+		<div class="col-md-6 col-left">
+			
+				{{#each burgers}}
+				{{#unless devoured}}
+				<section class="row">
+					<div class="col-md-9 col-left">
+						<h5 style="background:white; width=500px">{{id}}. {{burger_name}}</h5>
+					</div>
+					<div class="col-md-3 col-left">
+						<input type="text" id="textBox{{id}}" class="form-control" placeholder="Customer?" aria-label="Username">
+
+						<button class="devour" data-id="{{id}}">Devour it!</button>
+					</div>
+				</section>
+				
+				{{/unless}}
+				{{/each}}
+			
+		</div>
+		<div class="col-md-6 col-right">
+			{{#each burgers}}
+			{{#if devoured}}
+			<h5 style="background:white; width=500px">{{id}}. {{burger_name}} (Eaten by {{Customer.name}})</h5>
+			{{/if}}
+			{{/each}}
+		</div>
+	</section>
+	<br>
+
+	<div class="text-center">
+		<form class="create-form">
+			<div class="form-group">
+				
+				<textarea class="form-control" id="ca" rows="3"></textarea>
+			</div>
+
+
+
+			<button class="submit btn-primary" type="submit">Submit</button>
+			<h4>Enter a burger you want to eat. Click the "Submit" button.</h4>
+		</form>
+	</div>
+	<div class="text-center">
+		<h1 class="display-4">ENJOY!</h1>
+		<img src="/assets/img/images.jpg" alt="Cheeseburger" style="height:200px; width:100%;">
+
+
+	</div>
+
+
+
+</div>

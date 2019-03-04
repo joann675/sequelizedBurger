@@ -1,14 +1,15 @@
-# burger
+# sequelizedBurger
 
 ### Overview
 
-Eat-da-burger is a full stack restaurant application that allows uesers to input the names of burgers they'd like to eat.
+Like Eat-da-burger, Eat-da-burger (the sequelized edition) is a full stack restaurant application that allows users to input the names of burgers they'd like to eat.
 When a user submits a burger's name, that burger is displayed on the left side of the page - waiting to be devoured.
-Each burger on the left side also has a "Devour it!" button. 
-When this button is clicked, the burger moves to the right side of the page.
+Each burger on the left side has a "Devour it!" button and a text box with placeholder data populated with Customer?
+When a customer is entered into the text bos and the devour button is clicked, the burger moves to the right side of the page and is associated with the customer.
+If the customer does not exist in the customers table, that customer is created.
 Every burger whether devoured or not is stored in the database.
 
-This application is deployed on Heroku at  https://protected-beyond-11585.herokuapp.com/.
+This application is deployed on Heroku at https://mysterious-anchorage-72592.herokuapp.com/ 
 
 
 ### Dependencies
@@ -20,7 +21,7 @@ This includes express, express-handlebars, and mysql.
 
 This application was developed following the MVC model.
 It uses Node.js, Express, Handlebars with Bootstrap and a MySQL database.
-All database access is done through the ORM.
+All database access is done through Sequelize.
 Handlebars and Bootstrap are used to present the view to the user.
 The controller sits between the model and the view and is responsible for responding to the user input and
 all interactions on the data model objects. The controller creates all the necessary routes and the logic within those routes.
